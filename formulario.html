@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      h1{
+            color: #d9534f ;
+            font-family: verdana;
+            font-weight:bold;
+        } 
+    
+    </style>
+
+</head>
+
+<body>
+   
+    <div class="container text-justify">
+        <br><h1>Preenchimento de Formulário</h1><br>
+        <form  name="form1" action="enviar.php" method="post" onSubmit="return validar()">
+            <label>Nome:</label> <input class="form-control col-8"  name="nome" type="text" autocomplete="off" required><br /><br />
+            <label>E-mail:</label> <input class="form-control col-8"  name="email" type="text" autocomplete="off" required><br /><br />
+            <label>Cidade:</label> <input class="form-control col-8"  name="cidade" type="text" autocomplete="off" required><br /><br />
+            <input class="btn btn-danger btn-lg col-8 btn-block" type="submit" name="sbt" value="Enviar" />
+        </form>
+        
+    </div>
+
+<script>
+    function validar()
+    {
+        var nome=form1.nome.value;
+        var email=form1.email.value;
+        var cidade=form1.cidade.value;
+        if(nome==""){
+            alert("Preencha o campo com o seu nome!");
+            form1.nome.focus();
+            return false;
+        }
+        if(email==""){
+            alert("Preencha o campo com seu E-mail!");
+            form1.email.focus();
+            return false;
+        }
+        if(cidade==""){
+            alert("Preencha o campo com sua cidade!");
+            form1.cidade.focus();
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
